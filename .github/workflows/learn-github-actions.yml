@@ -11,3 +11,22 @@ jobs:
           node-version: '16'
       - run: npm install -g bats
       - run: bats -v
+
+# name: learn-github-actions
+# run-name: ${{ github.actor }} is learning GitHub Actions
+# on: [push]
+# jobs:
+#   setup:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: ./setup_server.sh
+#   build:
+#     needs: setup
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: ./build_server.sh
+#   test:
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: ./test_server.sh
